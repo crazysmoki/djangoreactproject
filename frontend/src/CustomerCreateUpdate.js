@@ -21,6 +21,10 @@ class CustomerCreateUpdate extends Component {
             this.refs.phone.value = c.phone;
             this.refs.address.value = c.address;
             this.refs.description.value = c.description;
+            this.refs.company.value = c.company;
+            this.refs.innCompany.value = c.inn_company;
+            this.refs.chief.value = c.chief;
+            this.refs.phoneCompany.value = c.phone_company;
           })
         }
       }
@@ -33,7 +37,11 @@ class CustomerCreateUpdate extends Component {
             "email": this.refs.email.value,
             "phone": this.refs.phone.value,
             "address": this.refs.address.value,
-            "description": this.refs.description.value
+            "description": this.refs.description.value,
+            "company": this.refs.company.value,
+            "inn_company": this.refs.innCompany.value,
+            "chief": this.refs.chief.value,
+            "phone_company": this.refs.phoneCompany.value
         }          
         ).then((result)=>{
           alert("Customer created!");
@@ -50,7 +58,11 @@ class CustomerCreateUpdate extends Component {
             "email": this.refs.email.value,
             "phone": this.refs.phone.value,
             "address": this.refs.address.value,
-            "description": this.refs.description.value
+            "description": this.refs.description.value,
+            "company": this.refs.company.value,
+            "innCompany": this.refs.innCompany.value,
+            "chief": this.refs.chief.value,
+            "phoneCompany": this.refs.phoneCompany.value
         }          
         ).then((result)=>{
           console.log(result);
@@ -100,6 +112,22 @@ class CustomerCreateUpdate extends Component {
             <label>
               Description:</label>
               <textarea className="form-control" ref='description' ></textarea>
+
+              <label>
+              Company:</label>
+              <input className="form-control" type="text" ref='company' />
+
+              <label>
+              INN Company:</label>
+              <input className="form-control" type="text" ref='innCompany' />
+
+              <label>
+              Chief:</label>
+              <input className="form-control" type="text" ref='chief' />
+
+              <label>
+              Phone Company:</label>
+              <input className="form-control" type="text" ref='phoneCompany' />
 
 
             <input className="btn btn-primary" type="submit" value="Submit" />

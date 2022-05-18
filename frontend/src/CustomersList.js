@@ -54,6 +54,10 @@ render() {
 				<th>Email</th>
 				<th>Address</th>
 				<th>Description</th>
+				<th>Company</th>
+				<th>INN Company</th>
+				<th>Chief</th>
+				<th>Phone Company</th>
 				<th>Actions</th>
 			</tr>
 			</thead>
@@ -67,6 +71,10 @@ render() {
 				<td>{c.email}</td>
 				<td>{c.address}</td>
 				<td>{c.description}</td>
+				<td>{c.company}</td>
+				<td>{c.inn_company}</td>
+				<td>{c.chief}</td>
+				<td>{c.phone_company}</td>
 				<td>
 				<button  onClick={(e)=>  this.handleDelete(e,c.pk) }> Delete</button>
 				<a  href={"/customer/" + c.pk}> Update</a>
