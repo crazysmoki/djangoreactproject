@@ -1,17 +1,14 @@
 from django.db import models
 
 class Customer(models.Model):
-	first_name = models.CharField("First name", max_length=255)
-	last_name = models.CharField("Last name", max_length=255)
-	email = models.EmailField()
-	phone = models.CharField(max_length=20)
+	first_name = models.CharField("First name", max_length=255, null=True)
+	last_name = models.CharField("Last name", max_length=255, null=True)
+	email = models.EmailField(null=True)
+	phone = models.CharField(max_length=20, null=True)
 	address = models.TextField(blank=True, null=True)
 	description = models.TextField(blank=True, null=True)
-	company = models.CharField("Company", max_length=255, null=True)
-	inn_company = models.CharField(max_length=20, null=True)
-	chief = models.CharField("Chief", max_length=255, null=True)
-	phone_company = models.CharField(max_length=20, null=True)
 	createdAt = models.DateTimeField("Created At", auto_now_add=True)
+
 	
 	def __str__(self):
 		return self.first_name
