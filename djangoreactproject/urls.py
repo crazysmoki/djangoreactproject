@@ -15,11 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from customers import views
+"""from customers import views"""
+from companies import views as companiesView
+from customers import views as customersView
 from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^api/customers/$', views.customers_list),
-    url(r'^api/customers/(?P<pk>[0-9]+)$', views.customers_detail),
+    url(r'^api/customers/$', customersView.customers_list),
+    url(r'^api/customers/(?P<pk>[0-9]+)$', customersView.customers_detail),
+    url(r'^api/companies/$', companiesView.companies_list),
+    url(r'^api/companies/(?P<pk>[0-9]+)$', companiesView.companies_detail),
 ]
+
+
