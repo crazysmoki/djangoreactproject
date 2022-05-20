@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CompaniesService from './CompaniesService';
 import InstantSearch from './components/InstantSearch';
-import SearchForm from './components/SearchForm';
+
 
 
 

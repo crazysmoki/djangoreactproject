@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CustomersService from './CustomersService';
-import SearchForm from './components/SearchForm';
+
 
 const customersService = new CustomersService();
 
